@@ -1,0 +1,65 @@
+/* ===========================================================================
+  headerNav
+============================================================================= */
+.headerNav {
+	background-color: $color_bg_gray;
+	@include mq(m-min) {
+		display: block !important;
+	}
+	@include mq(s) {
+		display: none;
+		flex: 1 0 100%;
+	}
+}
+.headerNav_list {
+	display: flex;
+	@include width-base($isBig:true);
+	@include mq(s) {
+		display: block;
+		width: 100%;
+	}
+}
+.headerNav_item {
+	flex: 1 1 0px;
+	border: solid 0 #fff;
+	border-right-width: 1px;
+	&:first-child {
+		border-left-width: 1px;
+	}
+	@include mq(s) {
+		border-width: 1px 0 0 0;	
+		&:first-child {
+			border-width: 0;
+		}
+	}
+}
+%headerNav_link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 15px;
+	color: $color_font;
+	text-align: center;
+	transition: background-color $hover_speed;
+	&:hover {
+		@include navActive;
+	}
+	@include mq(s) {
+		text-align: left;
+		padding-left: 40px;
+		position: relative;
+		@include arrow($color_main);
+		&::after {
+			right: auto;
+			left: 15px;
+		}
+	}
+}
+$dirList: design, coding, operation, tips, reference;
+@each $dir in $dirList {
+	.headerNav_link-#{$dir} {
+		@extend %headerNav_link;	
+		@include currentNav('body-#{$dir}');
+	}
+}

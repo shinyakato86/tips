@@ -1,0 +1,32 @@
+/* ===========================================================================
+  heading01
+============================================================================= */
+.heading01 {
+	background-color: $color_main;
+}
+%heading01_text {
+	color: #fff;
+	font-size: 3.0rem;
+	font-weight: bold;
+	padding: 45px 0;
+	@include mq(s) {
+		font-size: 2.0rem;
+		padding: 15px 0;
+	}
+}
+.heading01_text {
+	@include width-base;
+	@extend %heading01_text;
+}
+.heading01_text-s {
+	@include width-base($isSmall: true);
+	@extend %heading01_text;
+}
+.heading01_text-index {
+	@include width-base;
+	@extend %heading01_text;
+	padding: 200px 0;
+	@include mq(s) {
+		padding: 100px 0;
+	}
+}

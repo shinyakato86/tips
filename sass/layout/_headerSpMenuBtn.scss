@@ -1,0 +1,65 @@
+/* ===========================================================================
+  headerSpMenuBtn
+============================================================================= */
+.headerSpMenuBtn {
+	display: none;
+	@include mq(s) {
+		display: flex;
+		align-items: center;
+		padding: 0 $gutter-s;
+		color: $color_main;
+		transition: background-color .4s;
+		&::after {
+			content: 'menu';
+			padding-left: 7px;
+			font-weight: bold;
+		}
+		&.is-active {
+			background-color: $color_main;
+			&::after {
+				content: 'close';
+				color: #fff;
+			}
+		}
+	}
+}
+.headerSpMenuBtn_lines {
+	@include mq(s) {
+		display: inline-block;
+		width: 20px;
+		height: 13px;
+		position: relative;
+	}
+}
+.headerSpMenuBtn_line {
+	@include mq(s) {
+		display: inline-block;
+		transition: transform .4s;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $color_main;
+		&:nth-of-type(1) {
+			top: 0;
+		}
+		&:nth-of-type(2) {
+			top: 6px;
+		}
+		&:nth-of-type(3) {
+			bottom: 0;
+		}
+		.headerSpMenuBtn.is-active & {
+			background-color: #fff;
+			&:nth-of-type(1) {
+				transform: translateY(6px) rotate(-45deg);
+			}
+			&:nth-of-type(2) {
+				opacity: 0;
+			}
+			&:nth-of-type(3) {
+				transform: translateY(-6px) rotate(45deg);
+			}
+		}
+	}
+}

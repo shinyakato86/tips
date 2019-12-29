@@ -1,0 +1,48 @@
+/* ===========================================================================
+  pagelink
+============================================================================= */
+.pagelink {
+	border: solid 1px $color_border-gray;
+	padding: 10px;
+}
+.pagelink_list {
+	display: flex;
+	flex-wrap: wrap;
+	@include mq(s) {
+		justify-content: flex-start;
+	}
+}
+.pagelink_item {
+	display: flex;
+	align-items: center;
+	width: calc(100% / 6.001); 	// Edgeバグ回避
+	padding: 10px;
+	border-right: dotted 1px #ccc;
+	&:nth-child(6n) {
+		border-right: none;
+	}
+	&:nth-child(n+7) {
+		margin-top: 15px;
+	}
+	@include mq(s) {
+		width: calc(100% / 2);
+		&:nth-of-type(n+3) {
+			margin-top: 15px;
+		}
+		&:nth-of-type(even) {
+			border-right: none;
+		}
+	}
+}
+.pagelink_link {
+	display: block;
+	width: 100%;
+	padding-left: 30px;
+	background: resolve('arrow_bottom.svg') no-repeat left center/9px;
+	color: $color_link;
+	text-align: center;
+	&:hover {
+		color: $color_link-hover;
+		text-decoration: underline;
+	}
+}

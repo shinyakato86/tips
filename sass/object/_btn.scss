@@ -1,0 +1,56 @@
+/* ===========================================================================
+  btn
+============================================================================= */
+.btn {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	background-color: $color_main;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: bold;
+	text-align: center;
+	transition: background-color $hover_speed;
+	&:hover {
+		background-color: lighten($color_main, 10%);
+		@include mq(m) {
+			background-color: lighten($color_main, 0);
+		}
+	}
+	@include mq(s) {
+		padding: 15px;
+		font-size: 1.4rem;
+	}
+}
+.btn-m {
+	@extend .btn;
+	max-width: 550px;
+	@include mq(s) {
+		max-width: none;
+	}
+}
+.btn-s {
+	@extend .btn;
+	max-width: 270px;
+	@include mq(s) {
+		max-width: none;
+	}
+}
+.btn_text {
+	padding: 0 20px;
+	text-align: center;
+	position: relative;
+	@include arrow(#fff, 8px, 2px, right);
+}
+.btn_text-blank {
+	@extend .btn_text;
+	&::after {
+		width: 14px;
+		height: 10px;
+		border: 0;
+		background: resolve('icon_blank_white.svg') no-repeat center/contain;
+		transform: rotate(0);
+	}
+}

@@ -1,0 +1,10 @@
+/* ===========================================================================
+  codeArea
+============================================================================= */
+.codeArea {
+	@include tabBox_tab('code');
+}
+.codeArea_contents {
+	@include tabBox_contents;
+	overflow-x: auto;
+}

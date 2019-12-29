@@ -1,0 +1,22 @@
+/* ===========================================================================
+  heading05
+============================================================================= */
+.heading05 {
+	position: relative;
+	margin: 25px 0 10px;
+	padding-left: 13px;
+	color: $color_main;
+	font-weight: bold;
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 3px;
+		height: 90%;
+		background-color: $color_main;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto 0;
+	}
+}

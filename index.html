@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>tips</title>
+<meta name="description" content="tips">
+<meta property="og:title" content="tips">
+<meta property="og:description" content="tips">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://">
+<meta property="og:url" content="http://">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:site_name" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@">
+<meta name="theme-color" content="#294c7a">
+<link rel="apple-touch-icon-precomposed" href="">
+<link rel="shortcut icon" href="">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/vender/remodal.css">
+<link rel="stylesheet" href="css/vender/remodal-default-theme.css">
+</head>
+<body id="body-tips" class="">
+<main>
+<div class="heading01"><h1 class="heading01_text">Tips</h1></div>
+<section class="content">
+<div class="content_inner">
+<h2 class="heading02"><span class="heading02_text">このページについて</span></h2>
+<p>制作においてよく使うスタイルや調べたことを個人的にまとめています。</p>
+<nav class="pagelink mt50">
+<ul class="pagelink_list">
+<li class="pagelink_item"><a href="#sass" class="pagelink_link">Sass</a></li>
+<li class="pagelink_item"><a href="#shorthand" class="pagelink_link">ショートハンド</a></li>
+<li class="pagelink_item"><a href="#indent" class="pagelink_link">インデント</a></li>
+<li class="pagelink_item"><a href="#break" class="pagelink_link">改行</a></li>
+<li class="pagelink_item"><a href="#triangle" class="pagelink_link">三角形</a></li>
+<li class="pagelink_item"><a href="#btn" class="pagelink_link">ボタン</a></li>
+<li class="pagelink_item"><a href="#block" class="pagelink_link">ブロック</a></li>
+<li class="pagelink_item"><a href="#card" class="pagelink_link">カード</a></li>
+<li class="pagelink_item"><a href="#table" class="pagelink_link">テーブル</a></li>
+<li class="pagelink_item"><a href="#list" class="pagelink_link">リスト</a></li>
+<li class="pagelink_item"><a href="#dl" class="pagelink_link">説明リスト</a></li>
+<li class="pagelink_item"><a href="#image" class="pagelink_link">画像</a></li>
+<li class="pagelink_item"><a href="#accordion" class="pagelink_link">アコーディオン</a></li>
+<li class="pagelink_item"><a href="#modal" class="pagelink_link">モーダル</a></li>
+<li class="pagelink_item"><a href="#tab" class="pagelink_link">タブ切り替え</a></li>
+<li class="pagelink_item"><a href="#tel" class="pagelink_link">電話リンク</a></li>
+<li class="pagelink_item"><a href="#gradient" class="pagelink_link">グラデーション</a></li>
+<li class="pagelink_item"><a href="#other" class="pagelink_link">その他</a></li>
+</ul>
+</nav>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="sass" class="heading02"><span class="heading02_text">Sass</span></h2>
+<h3 class="heading03">アウトプットスタイル</h3>
+<h4 class="heading04">'nested'</h4>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>body {
+    width: 100%; }
+    body p {
+        color: #333; }</code>
+</pre>
+</div>
+<h4 class="heading04">'expanded'</h4>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>body {
+    width: 100%;
+}
+body p {
+    color: #333;
+}</code>
+</pre>
+</div>
+<h4 class="heading04">'compact'</h4>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>body { width: 100%; }
+body p { color: #333; }</code>
+</pre>
+</div>
+<h4 class="heading04">'compressed'</h4>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>body{width: 100%;}body p{color: #333;}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="shorthand" class="heading02"><span class="heading02_text">ショートハンド</span></h2>
+<h3 class="heading03">background</h3>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>
+    background: url(img/bg.png) right top / cover no-repeat;<br>
+    下記と同じ<br>
+    background-image: url(img/bg.png);
+    bacground-position: right top;
+    bacground-size: cover;
+    background-repeat: no-repeat;
+</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="indent" class="heading02"><span class="heading02_text">インデント</span></h2>
+<p class="indent-01 mt30"><span class="c-red">※</span>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+<p class="indent-02"><span class="c-red">※1 </span>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.indent-01 {
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+.indent-02 {
+	text-indent: -2em;
+	padding-left: 2em;
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="break" class="heading02"><span class="heading02_text">改行</span></h2>
+<p>小画面で改行します小画面で改行します小画面で改行します小画面で改行します<br class="br-s">ここから小画面で改行します小画面で改行します小画面で改行します小画面で改行します</p>
+<p>中画面で改行します中画面で改行します中画面で改行します中画面で改行します<br class="br-m">ここから中画面で改行します中画面で改行します中画面で改行します中画面で改行します</p>
+<p>大画面で改行します大画面で改行します大画面で改行します大画面で改行します<br class="br-l">ここから大画面で改行します大画面で改行します大画面で改行します大画面で改行します</p>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.br-s {
+    display: none;
+    @include mq(s) {
+        display: block;
+    }
+}
+.br-m {
+    display: none;
+    @include mq(m) {
+        display: block;
+    }
+    @include mq(s) {
+        display: none;
+    }
+}
+.br-l {
+    @include mq(m) {
+        display: none;
+    }
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="triangle" class="heading02"><span class="heading02_text">三角形</span></h2>
+<h3 class="heading03">ボーダーを使う方法</h3>
+<div class="triangle-top"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-top {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid $color-main;
+    border-left: 50px solid transparent; 
+}</code>
+</pre>
+</div>
+<div class="triangle-right mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid $color-main;
+}</code>
+</pre>
+</div>
+<div class="triangle-bottom mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid $color-main;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+}</code>
+</pre>
+</div>
+<div class="triangle-right mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 50px solid $color-main;
+    border-bottom: 50px solid transparent;
+}</code>
+</pre>
+</div>
+<h3 class="heading03">ボーダーを使わない方法</h3>
+<div class="triangle-top02 mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-top02 {
+        width: 100px;
+        height: 50px;
+        background:
+            linear-gradient(to bottom right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/50% 100%,
+            linear-gradient(to bottom left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/50% 100%;
+}</code>
+</pre>
+</div>
+<div class="triangle-right02 mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-right02 {
+    width: 50px;
+    height: 100px;
+    background:
+        linear-gradient(to bottom left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/100% 50%,
+        linear-gradient(to top left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat bottom right/100% 50%;
+}</code>
+</pre>
+</div>
+<div class="triangle-bottom02 mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-bottom02 {
+    width: 100px;
+    height: 50px;
+    background:
+        linear-gradient(to top right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/50% 100%,
+        linear-gradient(to top left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/50% 100%;
+}</code>
+</pre>
+</div>
+<div class="triangle-left02 mt30"></div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.triangle-left02 {
+    width: 50px;
+    height: 100px;
+    background:
+        linear-gradient(to top right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat bottom left/100% 50%,
+        linear-gradient(to bottom right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/100% 50%;
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="btn" class="heading02"><span class="heading02_text">ボタン</span></h2>
+<h3 class="heading03">通常ボタン</h3>
+<a href="" class="btn"><p class="btn_text">通常ボタン</p></a>
+<h4 class="heading04">1カラム</h4>
+<div class="btnList-col1">
+<a href="" class="btnList-col1_item btn-s"><p class="btn_text">通常ボタン（小）</p></a>
+<a href="" class="btnList-col1_item btn-m"><p class="btn_text">通常ボタン（中）</p></a>
+<a href="" class="btnList-col1_item btn"><p class="btn_text">通常ボタン（大）</p></a>
+</div>
+<h4 class="heading04">2カラム</h4>
+<div class="btnList-col2">
+<a href="" class="btnList-col2_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col2_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+</div>
+<h4 class="heading04">3カラム</h4>
+<div class="btnList-col3">
+<a href="" class="btnList-col3_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col3_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col3_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+</div>
+<h4 class="heading04">4カラム</h4>
+<div class="btnList-col4">
+<a href="" class="btnList-col4_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col4_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col4_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+<a href="" class="btnList-col4_item btn"><p class="btnList_text btn_text">通常ボタン</p></a>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="block" class="heading02"><span class="heading02_text">ブロック</span></h2>
+<h3 class="heading03">1カラム</h3>
+<div class="block04List-col1 mt40">
+<div class="block04List-col1_item block04">
+<figure class="block04_img"><img src="img/dummy_03.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<a href="" class="block04_link"><p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p></a>
+</div>
+</div>
+<div class="block04List-col1_item block04">
+<figure class="block04_img"><img src="img/dummy_02.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります<br>リンク無しの場合</p>
+</div>
+</div>
+</div>
+<h3 class="heading03">2カラム</h3>
+<div class="block04List-col2">
+<div class="block04List-col2_item block04">
+<figure class="block04_img"><img src="img/dummy_03.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<a href="" class="block04_link"><p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p></a>
+</div>
+</div>
+<div class="block04List-col2_item block04">
+<figure class="block04_img"><img src="img/dummy_02.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります<br>リンク無しの場合</p>
+</div>
+</div>
+<div class="block04List-col2_item block04">
+<figure class="block04_img"><img src="img/dummy_03.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<a href="" class="block04_link"><p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</p></a>
+</div>
+</div>
+<div class="block04List-col2_item block04">
+<figure class="block04_img"><img src="img/dummy_02.jpg" alt=""></figure>
+<div class="block04_text">
+<p class="block04_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります<br>リンク無しの場合</p>
+</div>
+</div>
+</div>
+<h3 class="heading03">3カラム</h3>
+<div class="block05List">
+<div class="block05List_item block05">
+<figure class="block05_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<dl class="block05_info">
+<dt>日付</dt>
+<dd>2020年 1月1日（水）</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+</dl>
+<div class="block05_btn"><a href="" class="btn"><p>詳細を見る</p></a></div>
+</div>
+<div class="block05List_item block05">
+<figure class="block05_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<dl class="block05_info">
+<dt>日付</dt>
+<dd>2020年 1月1日（水）</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+</dl>
+<div class="block05_btn"><a href="" class="btn"><p>詳細を見る</p></a></div>
+</div>
+<div class="block05List_item block05">
+<figure class="block05_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<dl class="block05_info">
+<dt>日付</dt>
+<dd>2020年 1月1日（水）</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入ります</dd>
+<dt>項目名</dt>
+<dd>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</dd>
+</dl>
+<div class="block05_btn"><a href="" class="btn"><p>詳細を見る</p></a></div>
+</div>
+</div>
+</div>
+</section>
+<section class="content-gray">
+<div class="content_inner">
+<h2 id="card" class="heading02"><span class="heading02_text">カード</span></h2>
+<div class="cardList mt40">
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+</div>
+</a>
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入ります。</p>
+</div>
+</a>
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+</div>
+</a>
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入ります。</p>
+</div>
+</a>
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+</div>
+</a>
+<a href="" class="cardList_item card">
+<figure class="card_img"><img src="img/dummy_01.jpg" alt=""></figure>
+<div class="card_text">
+<p class="card_date">2020年 1月1日（水）</p>
+<p>テキストが入りますテキストが入ります。</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="table" class="heading02"><span class="heading02_text">テーブル</span></h2>
+<table class="table01">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 45%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr>
+<th>TH</th>
+<th>TH</th>
+<th>TH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD</td>
+<td>TD</td>
+<td rowspan="2">
+<ul class="list01">
+<li>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</li>
+<li>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>TD</td>
+<td>TD</td>
+</tr>
+</tbody>
+</table>
+<div class="horizontalScroll mt40">
+<table class="table01">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr>
+<th>TH</th>
+<th colspan="2">TH</th>
+<th>TH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="table_bg01">TH1</th>
+<th class="table_bg02">TH2</th>
+<td>TD</td>
+<td rowspan="2">
+<ul class="list01">
+<li>スマホ時に横スクロールします</li>
+<li>テキストが入りますテキストが入りますテキストが入りますテキストが入ります</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="table_bg01">TH1</th>
+<th class="table_bg02">TH2</th>
+<td>TD</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="list" class="heading02"><span class="heading02_text">リスト</span></h2>
+<h3 class="heading03">list01</h3>
+<ul class="list01">
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+</ul>
+<h3 class="heading03">list02</h3>
+<ul class="list02">
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+<li>リストアイテムが入りますリストアイテムが入ります</li>
+</ul>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="dl" class="heading02"><span class="heading02_text">説明リスト</span></h2>
+<h3 class="heading03">dl01</h3>
+<dl class="dl01">
+<dt>用語が入ります用語が入ります</dt>
+<dd>説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります</dd>
+<dt>用語が入ります用語が入ります</dt>
+<dd>説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります</dd>
+</dl>
+<h3 class="heading03">dl02</h3>
+<dl class="dl02">
+<div class="dl02_item">
+<dt>用語が入ります</dt>
+<dd>説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります</dd>
+</div>
+<div class="dl02_item">
+<dt>用語が入ります</dt>
+<dd>説明が入ります説明が入ります説明が入ります説明が入ります説明が入ります</dd>
+</div>
+</dl>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="image" class="heading02"><span class="heading02_text">画像</span></h2>
+<p>IE未対応のため、<a href="https://github.com/fregante/object-fit-images" target="_blank" rel="noopener" class="link-text icon-blank">object-fit-images</a>プラグインを使用。</p>
+<h4 class="heading04">画像を16：9サイズにcover（縦横比固定パターン）</h4>
+<div class="image01List">
+<div class="image01List_item image01">
+<figure class="image01_img-cover"><img src="img/dummy_01.jpg" alt=""></figure>
+</div>
+<div class="image01List_item image01">
+<figure class="image01_img-cover"><img src="img/dummy_02.jpg" alt=""></figure>
+</div>
+<div class="image01List_item image01">
+<figure class="image01_img-cover"><img src="img/dummy_03.jpg" alt=""></figure>
+</div>
+</div>
+<h4 class="heading04">画像を正方形サイズにcontain（縦横比固定パターン）</h4>
+<div class="image01List">
+<div class="image01List_item image01">
+<figure class="image01_img-contain"><img src="img/dummy_01.jpg" alt=""></figure>
+</div>
+<div class="image01List_item image01">
+<figure class="image01_img-contain"><img src="img/dummy_02.jpg" alt=""></figure>
+</div>
+<div class="image01List_item image01">
+<figure class="image01_img-contain"><img src="img/dummy_03.jpg" alt=""></figure>
+</div>
+</div>
+<h4 class="heading04">画像を200×150サイズにcover（ピクセル固定パターン）</h4>
+<figure class="image01-200"><img src="img/dummy_01.jpg" alt=""></figure>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="accordion" class="heading02"><span class="heading02_text">アコーディオン</span></h2>
+<div class="blockToggleList">
+<div class="blockToggleList_item blockToggle">
+<h3 class="blockToggle_title js-blockToggle_title">アコーディオン<br class="br-s"><span class="blockToggle_title-sub">テキストが入りますテキストが入ります</span></h3>
+<div class="blockToggle_detail js-blockToggle_detail">
+<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+</div>
+</div>
+<div class="blockToggleList_item blockToggle">
+<h3 class="blockToggle_title js-blockToggle_title">アコーディオン<br class="br-s"><span class="blockToggle_title-sub">テキストが入りますテキストが入ります</span></h3>
+<div class="blockToggle_detail js-blockToggle_detail">
+<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+</div>
+</div>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>&lt;div class="blockToggleList_item blockToggle"&gt;
+    &lt;h3 class="blockToggle_title js-blockToggle_title"&gt;アコーディオン&lt;br class="br-s"&gt;&lt;span class="blockToggle_title-sub"&gt;テキストが入りますテキストが入ります&lt;/span&gt;&lt;h3&gt;
+    &lt;div class="blockToggle_detail js-blockToggle_detail">
+        &lt;p&gt;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト&lt;p&gt;
+    &lt;div&gt;
+&lt;div&gt;</code>
+</pre>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>/* script.js */
+  $(".js-blockToggle_title").click(function () {
+      $(this).next(".js-blockToggle_detail").slideToggle("fast");
+      $(this).toggleClass("is-open");
+  });</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="modal" class="heading02"><span class="heading02_text">モーダル</span></h2>
+<a href="#modal01" class="btn-s"><p class="btn_text">モーダルリンク</p></a>
+<!--remodal-bg-->
+<div class="remodal-bg">
+<div class="remodal" data-remodal-id="modal01">
+<button class="remodal-close" data-remodal-action="close"></button>
+<div class="remodal-area">
+<p class="remodal-img"><img src="img/dummy_01.jpg" alt=""></p>
+<p class="mt10">モーダル1</p>
+</div>
+</div>
+</div>
+<!--remodal-bg-->
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>&lt;a href=&quot;#modal01&quot; class=&quot;btn-s&quot;&gt;&lt;p class=&quot;btn_text&quot;&gt;モーダルリンク&lt;/p&gt;&lt;/a&gt;
+&lt;!--remodal-bg--&gt;
+&lt;div class=&quot;remodal-bg&quot;&gt;
+    &lt;div class=&quot;remodal&quot; data-remodal-id=&quot;modal01&quot;&gt;
+        &lt;button class=&quot;remodal-close&quot; data-remodal-action=&quot;close&quot;&gt;&lt;/button&gt;
+        &lt;div class=&quot;remodal-area&quot;&gt;
+            &lt;p class=&quot;remodal-img&quot;&gt;&lt;img src=&quot;img/dummy_01.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+            &lt;p class=&quot;mt10&quot;&gt;モーダル1&lt;/p&gt;
+         &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--remodal-bg--&gt;</code>
+</pre>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/vender/remodal.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/vender/remodal-default-theme.css&quot;&gt;
+&lt;script src=&quot;js/vender/remodal.min.js&quot;&gt;&lt;/script&gt;</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="tab" class="heading02"><span class="heading02_text">タブ切り替え</span></h2>
+<div id="js-tabBtnList_btn_01" class="tabBtnList">
+<button class="tabBtnList_btn-col2 is-active">ON</button>
+<button class="tabBtnList_btn-col2">OFF</button>
+</div>
+<div id="js-tabBtnList_item_01">
+<div class="tabBtnList_item is-active">1番目のコンテンツ</div>
+<div class="tabBtnList_item">2番目のコンテンツ</div>
+</div>
+<div id="js-tabBtnList_btn02_01" class="tabBtnList mt50">
+<button class="tabBtnList_btn-col3 is-active">ON</button>
+<button class="tabBtnList_btn-col3">OFF</button>
+<button class="tabBtnList_btn-col3">OFF</button>
+</div>
+<div id="js-tabBtnList_item02_01">
+<div class="tabBtnList_item is-active">1番目のコンテンツ</div>
+<div class="tabBtnList_item">2番目のコンテンツ</div>
+<div class="tabBtnList_item">3番目のコンテンツ</div>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>&lt;div id=&quot;js-tabBtnList_btn_01&quot; class=&quot;tabBtnList&quot;&gt;
+    &lt;button class=&quot;tabBtnList_btn-col2 is-active&quot;&gt;ON&lt;/button&gt;
+    &lt;button class=&quot;tabBtnList_btn-col2&quot;&gt;OFF&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;js-tabBtnList_item_01&quot;&gt;
+    &lt;div class=&quot;tabBtnList_item is-active&quot;&gt;1番目のコンテンツ&lt;/div&gt;
+    &lt;div class=&quot;tabBtnList_item&quot;&gt;2番目のコンテンツ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;js-tabBtnList_btn02_01&quot; class=&quot;tabBtnList mt50&quot;&gt;
+    &lt;button class=&quot;tabBtnList_btn-col3 is-active&quot;&gt;ON&lt;/button&gt;
+    &lt;button class=&quot;tabBtnList_btn-col3&quot;&gt;OFF&lt;/button&gt;
+    &lt;button class=&quot;tabBtnList_btn-col3&quot;&gt;OFF&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;js-tabBtnList_item02_01&quot;&gt;
+    &lt;div class=&quot;tabBtnList_item is-active&quot;&gt;1番目のコンテンツ&lt;/div&gt;
+    &lt;div class=&quot;tabBtnList_item&quot;&gt;2番目のコンテンツ&lt;/div&gt;
+    &lt;div class=&quot;tabBtnList_item&quot;&gt;3番目のコンテンツ&lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>/* script.js */
+    for (let i=1; i<=3; i++) { //max3tab 3個まで使用可能
+        const tabid01_01 = '#js-tabBtnList_btn_0'+ i,tabid01_02 = '#js-tabBtnList_item_0'+ i;
+        $(tabid01_01).children().on('click', function() {
+            const index = $(this).index();
+            $(tabid01_01).children().removeClass('is-active');
+            $(tabid01_02).children().removeClass('is-active').eq(index).addClass('is-active');
+            $(this).addClass('is-active');
+        });
+    
+        const tabid02_01 = '#js-tabBtnList_btn02_0'+ i,tabid02_02 = '#js-tabBtnList_item02_0'+ i;
+            $(tabid02_01).children().on('click', function() {
+            const index = $(this).index();
+            $(tabid02_01).children().removeClass('is-active');
+            $(tabid02_02).children().removeClass('is-active').eq(index).addClass('is-active');
+            $(this).addClass('is-active');
+        });
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="tel" class="heading02"><span class="heading02_text">電話リンク</span></h2>
+<p>スマホ閲覧時に、タップで電話がかけられるようにする。</p>
+<p class="mt10">電話番号：<span class="js-tel">000-000-0000</span></p>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>&lt;p&gt;電話番号：&lt;span class=&quot;js-tel&quot;&gt;052-953-1001&lt;/span&gt;&lt;/p&gt;</code>
+</pre>
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>const ua = navigator.userAgent;
+    if((ua.indexOf(&#039;iPhone&#039;) &gt; 0 &amp;&amp; ua.indexOf(&#039;iPod&#039;)) === -1 || (ua.indexOf(&#039;Android&#039;) &gt; 0 &amp;&amp; ua.indexOf(&#039;Mobile&#039;)) &gt; 0 || ua.indexOf(&#039;Windows Phone&#039;) &gt; 0) {
+        $(&#039;.js-tel&#039;).each(function() {
+            const str = $(this).text();
+            $(this).html($(&#039;&lt;a class=&quot;link-tel&quot;&gt;&#039;).attr(&#039;href&#039;, &#039;tel:&#039; + str.replace(/-/g, &#039;&#039;)).append(str + &#039;&lt;/a&gt;&#039;));
+        });
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="gradient" class="heading02"><span class="heading02_text">グラデーション</span></h2>
+<div class="gradient">
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>background: linear-gradient(方向or角度, 開始色 開始位置, 終了色 終了位置);
+.gradient {
+    padding: 30px 0;
+    background: linear-gradient(-59deg, #fc8742 60%, #f00 40%);
+}</code>
+</pre>
+</div>
+<div class="gradient-02 mt20">
+</div>
+<div class="codeArea mt20">
+<pre class="codeArea_contents">
+<code>.gradient-02 {
+	padding: 30px 0;
+	background:linear-gradient(to right, #f00 33.3%, #0f0 33.3%, #0f0 66.6%, #00f 66.6%);
+}</code>
+</pre>
+</div>
+</div>
+</section>
+<section class="content">
+<div class="content_inner">
+<h2 id="other" class="heading02"><span class="heading02_text">その他</span></h2>
+<h3 class="heading03">ページネーション</h3>
+<ul class="pagination">
+<li class="pagination_item"><a href="" aria-label="前のページへ" class="pagination_link-previous">前のページへ</a></li>
+<li class="pagination_item"><a href="" class="pagination_link is-active">1</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">2</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">3</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">4</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">5</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">6</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">7</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">8</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">9</a></li>
+<li class="pagination_item"><a href="" class="pagination_link">10</a></li>
+<li class="pagination_item"><a href="" aria-label="次のページへ" class="pagination_link-next">次のページへ</a></li>
+</ul>
+<h3 class="heading03">Googleマップ</h3>
+<iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8894.05191894958!2d136.90991663774355!3d35.17015545556802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370d662a80445%3A0xea615895eff89cc2!2z5ZCN5Y-k5bGL44OG44Os44OT5aGU!5e0!3m2!1sja!2sjp!4v1577542430952!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+<h3 class="heading03">YouTube</h3>
+<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/37hiDlYNT-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
+</section>
+<!-- InstanceEndEditable -->
+</main>
+<footer class="footer">
+<div class="footer_inner">
+<p class="footer_copy"><small>©shinya kato</small></p>
+</div>
+</footer>
+<p id="js-pagetop" class="pagetop">PAGETOP</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vender/jquery-3.3.1.min.js"><\/script>');</script>
+<script src="js/vender/jquery.matchHeight.js"></script>
+<script src="js/vender/ofi.min.js"></script>
+<script src="js/vender/picturefill.min.js"></script>
+<script src="js/vender/remodal.min.js"></script>
+<script src="js/script.js"></script>
+<!-- InstanceBeginEditable name="script" -->
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,35 @@
+/* ===========================================================================
+  pagetop
+============================================================================= */
+.pagetop {
+	position: fixed;
+	bottom: 60px;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	background-color: $color_main;
+	cursor: pointer;
+	transition: background-color $hover_speed;
+	&:hover {
+		background-color: lighten($color_main, 10%);
+	}
+	@include text-hide;
+	@include arrow(#fff, 14px, 4px, top);
+	&::after {
+		right: 0;
+		left: 0;
+		top: 5px;
+		margin: auto;
+	}
+	@include mq(s) {
+		width: 45px;
+		height: 45px;
+		bottom: 36px;
+		&::after {
+			width: 10px;
+			height: 10px;
+			border-top-width: 3px;
+			border-right-width: 3px;
+		}
+	}
+}

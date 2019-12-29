@@ -1,0 +1,49 @@
+/* ===========================================================================
+  block04
+============================================================================= */
+.block04 {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: $color_bg-gray;
+	padding: 30px;
+	@include mq(s) {
+		padding: 15px;
+	}
+}
+.block04_text {
+	width: calc(70% - 20px);
+	@include mq(s) {
+		width: calc(60% - 20px);
+	}
+}
+.block04_img {
+	width: 30%;
+	background-color: #fff;
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+	}
+	> img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		max-height: 100%;
+	}
+	@include mq(s) {
+		width: 40%;
+	}
+}
+.block04_date {
+	margin-bottom: 10px;
+}
+.block04_link {
+	@include linkText();
+}

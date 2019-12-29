@@ -1,0 +1,14 @@
+/* ===========================================================================
+  list02
+============================================================================= */
+.list02 {
+	list-style: none;
+	border-top: solid 1px $color_border-gray;
+	> li {
+		padding: 20px 0;
+		border-bottom: solid 1px $color_border-gray;
+		@include mq(s) {
+			padding: 15px 0;
+		}
+	}
+}

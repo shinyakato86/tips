@@ -1,0 +1,28 @@
+/* ===========================================================================
+  breadcrumbs
+============================================================================= */
+.breadcrumbs {
+	@include width-base($isBig: 'true');
+	@include mq(s) {
+		display: none;
+	}
+}
+.breadcrumbs_list {
+	display: flex;
+	padding: 10px 0;
+}
+.breadcrumbs_item {
+	& + & {
+		&::before {
+			content: '>';
+			margin: 0 10px;
+		}
+	}
+}
+.breadcrumbs_link {
+	color: $color_link;
+	&:hover {
+		color: $color_link;
+		text-decoration: underline;
+	}
+}

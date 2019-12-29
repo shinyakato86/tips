@@ -1,0 +1,40 @@
+/* ===========================================================================
+  image01
+============================================================================= */
+.image01 {
+	border: solid 1px $color_border-gray;
+}
+.image01-200 {
+	> img {
+		width: 200px;
+		height: 150px;
+		object-fit: cover;
+		font-family: 'object-fit: cover;';
+	}
+}
+%image01_img-ratio {
+	position: relative;
+	> img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.image01_img-cover {
+	@extend %image01_img-ratio;
+	padding-top: 56.25%;
+	> img {
+		object-fit: cover;
+		font-family: 'object-fit: cover;';
+	}
+}
+.image01_img-contain {
+	@extend %image01_img-ratio;
+	padding-top: 100%;
+	> img {
+		object-fit: contain;
+		font-family: 'object-fit: contain;';
+	}
+}

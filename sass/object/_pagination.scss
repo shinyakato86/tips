@@ -1,0 +1,83 @@
+/* ===========================================================================
+  pagination
+============================================================================= */
+.pagination {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	@include mq(s) {
+		font-size: 1.4rem;
+	}
+}
+.pagination_item {
+	margin: 0 10px;
+	&:first-child {
+		margin: 0 20px 0 0;
+	}
+	&:last-child {
+		margin: 0 0 0 20px;
+	}
+	@include mq(s) {
+		margin: 0 5px;
+		&:first-child {
+			margin-right: 10px;
+		}
+		&:last-child {
+			margin-left: 10px;
+		}
+	}
+}
+%pagination_link-arrow {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-color: $color_main;
+	border-radius: 50%;
+	font-size: 0;
+	position: relative;	
+	@include mq(s) {
+		width: 20px;
+		height: 20px;
+		&::after {
+			width: 5px;
+			height: 5px;
+			border-width: 1px;
+		}
+	}
+}
+.pagination_link-previous {
+	@extend %pagination_link-arrow;
+	@include arrow(#fff, 7px, 2px, left);
+	&::after {
+		right: 10px;
+		@include mq(s) {
+			right: 6px;
+		}
+	}
+}
+.pagination_link-next {
+	@extend %pagination_link-arrow;
+	@include arrow(#fff, 7px, 2px, right);
+	&::after {
+		right: 13px;
+		@include mq(s) {
+			right: 9px;
+		}
+	}
+}
+.pagination_link {
+	display: block;
+	padding: 10px;
+	color: #ccc;
+	transition: color $hover_speed;
+	&.is-active,
+	&:hover {
+		color: $color_font;
+	}
+	@include mq(s) {
+		padding: 5px;
+	}
+}

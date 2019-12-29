@@ -1,0 +1,19 @@
+/* ===========================================================================
+  header
+============================================================================= */
+.header {
+	@include mq(s) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		border-bottom: solid 1px $color_main;
+	}
+}
+.header_logo {
+	width: 150px;
+	margin: 20px auto 40px;
+	@include mq(s) {
+		width: 70px;
+		margin: 10px $gutter-s;
+	}
+}

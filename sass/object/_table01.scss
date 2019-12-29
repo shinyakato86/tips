@@ -1,0 +1,38 @@
+/* ===========================================================================
+  table01
+============================================================================= */
+.table01 {
+	border: solid 1px $color_border-gray;
+	> thead {
+		> tr {
+			border-bottom: solid 1px $color_border-gray;
+			> th {
+				border-right: solid 1px $color_border-gray;
+				background-color: $color_bg-gray;
+				padding: 15px;
+				@include mq(s) {
+					padding: 10px;
+				}
+			}
+		}
+	}
+	> tbody {
+		> tr {
+			border-bottom: solid 1px $color_border-gray;
+			> th,
+			> td {
+				border-right: solid 1px $color_border-gray;
+				padding: 15px;
+				@include mq(s) {
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+.table01_bg01 {
+	background-color: $color_bg-gray;
+}
+.table01_bg02 {
+	background-color: #f8f8f8;
+}

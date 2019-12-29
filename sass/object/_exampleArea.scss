@@ -1,0 +1,9 @@
+/* ===========================================================================
+  exampleArea
+============================================================================= */
+.exampleArea {
+	@include tabBox_tab('example');
+}
+.exampleArea_contents {
+	@include tabBox_contents;
+}

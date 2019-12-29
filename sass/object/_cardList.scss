@@ -1,0 +1,39 @@
+/* ===========================================================================
+  cardList
+============================================================================= */
+.cardList {
+	display: flex;
+	flex-wrap: wrap;
+	@include mq(s) {
+		display: block;
+	}
+}
+.cardList_item {
+	flex-basis: calc((100% - 40px * 2) / 3.001);	// Edgeバグ回避
+	&:not(:nth-child(3n)) {
+		margin-right: 40px;
+	}
+	&:nth-child(n+4) {
+		margin-top: 40px;
+	}
+	@include mq(m) {
+		flex-basis: calc((100% - 20px) / 2);
+		&:nth-child(n) {
+			margin-right: 0;
+		}	
+		&:nth-child(even) {
+			margin-left: 20px;
+		}	
+		&:nth-child(n+3) {
+			margin-top: 20px;
+		}
+	}
+	@include mq(s) {
+		&:nth-child(n) {
+			margin-left: 0;
+		}	
+		&:nth-child(n+2) {
+			margin-top: 15px;
+		}
+	}
+}

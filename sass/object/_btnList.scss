@@ -1,0 +1,66 @@
+/* ===========================================================================
+  btnList
+============================================================================= */
+/* col1 */
+.btnList-col1_item {
+	&:nth-child(n+2) {
+		margin-top: 10px;
+		@include mq(s) {
+			margin-top: 5px;
+		}
+	}
+}
+
+/* col2-4 */
+@for $value from 2 through 4 {
+	.btnList-col#{$value} {
+		display: flex;
+		flex-wrap: wrap;
+		@include mq(s) {
+			display: block;
+		}
+	}
+	.btnList-col#{$value}_item {
+		display: flex;
+		align-items: center;
+		width: calc((100% - 10px * (#{$value} - 1)) / #{$value});
+		margin: 0;
+		@include mq(s) {
+			width: 100%;
+			&:nth-child(n) {
+				margin-right: 0;
+			}
+			& + & {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+.btnList-col2_item {
+	&:nth-child(odd) {
+		margin-right: 10px;
+	}
+	&:nth-child(n+3) {
+		margin-top: 10px;
+	}
+}
+.btnList-col3_item {
+	&:not(:nth-child(3n)) {
+		margin-right: 9.999px;	// Edgeバグ回避
+	}
+	&:nth-child(n+4) {
+		margin-top: 10px;
+	}
+}
+.btnList-col4_item {
+	&:not(:nth-child(4n)) {
+		margin-right: 10px;
+	}
+	&:nth-child(n+5) {
+		margin-top: 10px;
+	}
+}
+.btnList_text {
+	width: 100%;
+	text-align: center;
+}

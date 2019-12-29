@@ -1,0 +1,59 @@
+/* ===========================================================================
+  triangle
+============================================================================= */
+.triangle-top {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid $color-main;
+    border-left: 50px solid transparent; 
+}
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid $color-main;
+}
+.triangle-bottom {
+    width: 0;
+    height: 0;
+    border-top: 50px solid $color-main;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+}
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 50px solid $color-main;
+    border-bottom: 50px solid transparent;
+}
+.triangle-top02 {
+    width: 100px;
+    height: 50px;
+    background:
+        linear-gradient(to bottom right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/50% 100%,
+        linear-gradient(to bottom left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/50% 100%;
+}
+.triangle-right02 {
+    width: 50px;
+    height: 100px;
+    background:
+        linear-gradient(to bottom left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/100% 50%,
+        linear-gradient(to top left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat bottom right/100% 50%;
+}
+.triangle-bottom02 {
+    width: 100px;
+    height: 50px;
+    background:
+        linear-gradient(to top right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top left/50% 100%,
+        linear-gradient(to top left, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/50% 100%;
+}
+.triangle-left02 {
+    width: 50px;
+    height: 100px;
+    background:
+        linear-gradient(to top right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat bottom left/100% 50%,
+        linear-gradient(to bottom right, rgba(255,255,255,0) 50%, $color-main 50.5%) no-repeat top right/100% 50%;
+}

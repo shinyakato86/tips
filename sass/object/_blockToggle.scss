@@ -1,0 +1,66 @@
+/* ===========================================================================
+  blockToggle
+============================================================================= */
+.blockToggle {
+	cursor: pointer;
+	background-color: $color-main;
+	padding: 15px 25px;
+	@include mq(s) {
+		padding: 10px;
+	}
+	&:hover {
+		background-color: lighten($color_main, 10%);
+		transition: $hover_speed;
+		@include mq(m) {
+			background-color: lighten($color_main, 0);
+		}
+	}
+}
+.blockToggle_title {
+	@include arrow($color: #fff, $direction: bottom);
+	font-size: 2.0rem;
+	color: #fff;
+	font-weight: bold;
+	position: relative;
+	padding: 3px 40px 3px 50px;
+	@include mq(s) {
+		font-size: 1.6rem;
+		padding-left: 30px;
+	}
+	&::before {
+		position: absolute;
+		left: 8px;
+		top: 0;
+		height: 36px;
+		transform: skewX(-20deg);
+		border-right: solid 10px #fff;
+		content: '';
+		@include mq(s) {
+			height: 30px;
+			border-right: solid 7px $color-main;
+		}
+	}
+	&.is-open::after {
+		transform: rotate(-45deg);
+	}
+}
+.blockToggle_title-sub {
+	font-size: 1.4rem;
+	margin-left: 30px;
+	font-weight: normal;
+	@include mq(s) {
+		margin-left: 0;
+	}
+}
+.blockToggle_detail {
+	display: none;
+	background-color: #fff;
+	padding: 25px;
+	margin-top: 20px;
+	border: 1px solid #c6c6c6;
+	cursor: auto;
+	@include mq(s) {
+		padding: 15px 10px;
+		margin-top: 10px;
+	}
+}

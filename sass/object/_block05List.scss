@@ -1,0 +1,40 @@
+/* ===========================================================================
+  block05List
+============================================================================= */
+.block05List {
+	display: flex;
+	flex-wrap: wrap;
+	@include mq(s) {
+		display: block;
+	}
+}
+.block05List_item {
+	width: calc((100% - 20px * 2) / 3.001);		// Edgeバグ回避
+	&:not(:nth-child(3n)) {
+		margin-right: 20px;
+	}
+	&:nth-child(n+4) {
+		margin-top: 20px;
+	}
+	@include mq(m) {
+		width: calc((100% - 20px) / 2);
+		&:not(:nth-child(3n)) {
+			margin-right: 0;
+		}
+		&:nth-child(odd) {
+			margin-right: 20px;
+		}
+		&:nth-child(n+3) {
+			margin-top: 20px;
+		}
+	}
+	@include mq(s) {
+		width: 100%;	
+		&:nth-child(odd) {
+			margin-right: 0;
+		}
+		&:nth-child(n+2) {
+			margin-top: 15px;
+		}
+	}
+}

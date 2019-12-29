@@ -1,0 +1,27 @@
+/* ===========================================================================
+  dl02
+============================================================================= */
+.dl02_item {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	border-top: solid 1px $color_border-gray;
+	&:last-child {
+		border-bottom: solid 1px $color_border-gray;
+	}
+	> dt {
+		flex-basis: 25%;
+		font-size: 1.6rem;
+		font-weight: bold;
+	}
+	> dd {
+		flex-basis: 70%;
+	}
+	@include mq(s) {
+		display: block;
+		padding: 15px 0;
+		> dt {
+			margin-bottom: 5px;
+		}
+	}
+}

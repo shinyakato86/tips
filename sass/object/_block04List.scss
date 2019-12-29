@@ -1,0 +1,36 @@
+/* ===========================================================================
+  block04List
+============================================================================= */
+.block04List-col1_item {
+	&:nth-child(n+2) {
+		margin-top: 25px;
+		@include mq(s) {
+			margin-top: 15px;
+		}
+	}
+}
+.block04List-col2 {
+	display: flex;
+	flex-wrap: wrap;
+	@include mq(s) {
+		display: block;
+	}
+}
+.block04List-col2_item {
+	width: calc((100% - 20px) / 2);
+	&:nth-child(even) {
+		margin-left: 20px;
+	}
+	&:nth-child(n+3) {
+		margin-top: 20px;
+	}
+	@include mq(s) {
+		width: 100%;
+		&:nth-child(even) {
+			margin-left: 0;
+		}
+		&:nth-child(n+2) {
+			margin-top: 15px;
+		}
+	}
+}

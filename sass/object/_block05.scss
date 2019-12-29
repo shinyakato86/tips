@@ -1,0 +1,37 @@
+/* ===========================================================================
+  block05
+============================================================================= */
+.block05 {
+	background-color: $color_bg-gray;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	@include mq(s) {
+		padding: 15px;
+	}
+}
+.block05_img {
+	margin-bottom: 10px;
+	flex-shrink: 0;		// IE11バグ回避
+}
+.block05_info {
+	display: flex;
+	flex-wrap: wrap;
+	> dt {
+		width: 30%;
+		padding: 15px 10px;
+		border-bottom: solid 1px $color_main;
+	}
+	> dd {
+		width: 70%;
+		padding: 15px 10px;
+		border-bottom: solid 1px $color_main;
+	}
+}
+.block05_btn {
+	margin-top: auto;
+	padding-top: 30px;
+	@include mq(s) {
+		padding-top: 15px;
+	}
+}

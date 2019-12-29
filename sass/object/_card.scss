@@ -1,0 +1,28 @@
+/* ===========================================================================
+  card
+============================================================================= */
+.card {
+	display: block;
+	box-shadow: 0 1px 4px 0 rgba(#000, .1);
+	background-color: #fff;
+	color: $color_font;
+}
+.card_img {
+	overflow: hidden;
+	> img {
+		width: 100%;
+		transition: transform $hover_speed;
+		.card:hover & {
+			transform: scale(1.3);
+		}
+	}
+}
+.card_text {
+	padding: 30px;
+	@include mq(s) {
+		padding: 15px;
+	}
+}
+.card_date {
+	margin-bottom: 10px;
+}

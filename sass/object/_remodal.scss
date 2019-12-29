@@ -1,0 +1,27 @@
+/* ===========================================================================
+  remodal
+============================================================================= */
+.remodal {
+	position:relative;
+	text-align:left;
+	padding-top:35px;
+}
+.remodal-area {
+	background-color:#FFF;
+	padding:30px;
+	@include mq(s) {
+		padding:15px;
+	}
+}
+.remodal-overlay {
+	background: rgba(0, 0, 0, 0.5) !important;
+}
+.remodal-close {
+	color:#FFF !important;
+	top:0 !important;
+	right:0 !important;
+	left:auto !important;
+}
+.remodal-img {
+	text-align:center;
+}
